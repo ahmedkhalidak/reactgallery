@@ -55,22 +55,23 @@ class photo extends Component {
         const { photos, min, max } = this.state;
 
         const photoCards = photos.slice(min, max).map((photo, index) => (
-            <div className="col-md-4 mb-4" key={photo.id}>
-                <div className="card" style={{ width: '18rem', height: '100%' }}>
-    <img src={photo.url} className="card-img-top" alt={photo.title} />
-    <div className="card-body bg-dark text-white rounded p-3 d-flex flex-column justify-content-between">
-        <div>
-            <p className="card-text">{photo.title}</p>
-        </div>
-        <div>
-            <p className="card-text font-weight-bold fs-4 border-bottom pb-2 mb-2">
-                Card ID: {index + min + 1}
-            </p>
-        </div>
-         </div>
-        </div>
+          <div className="col-md-4 mb-4 col-sm-6 col-12" key={photo.id}>
+            <div className="card" style={{ height: '100%' }}>
+              <img src={photo.url} className="card-img-top" alt={photo.title} />
+              <div className="card-body bg-dark text-white rounded p-3 d-flex flex-column justify-content-between">
+                <div>
+                  <p className="card-text">{photo.title}</p>
+                </div>
+                <div>
+                  <p className="card-text font-weight-bold fs-4 border-bottom pb-2 mb-2">
+                    Card ID: {index + min + 1}
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         ));
+        
 
         return (
             <div className=" container "> 
@@ -87,7 +88,7 @@ class photo extends Component {
 </svg>Next</button>
                 
                 
-                <div className="row">
+    <div className="row justify-content-center"> 
                     {photoCards}
                 </div>
             </div>
