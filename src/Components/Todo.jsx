@@ -52,7 +52,7 @@ class photo extends Component {
     }
 
     render() {
-          const { photos, min, max } = this.state;
+        const { photos, min, max } = this.state;
 
 const photoCards = photos.slice(min, max).map((photo, index) => (
   <div className="col-md-6 mb-4 col-lg-4 col-sm-6 col-12" key={photo.id}>
@@ -87,7 +87,7 @@ const photoCards = photos.slice(min, max).map((photo, index) => (
 </svg>Next</button>
                 
                 
-                <div className="row">
+    <div className="row justify-content-center"> 
                     {photoCards}
                 </div>
             </div>
